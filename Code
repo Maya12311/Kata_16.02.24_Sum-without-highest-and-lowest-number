@@ -1,0 +1,28 @@
+public class Kata
+{
+  public static int sum(int[] numbers)
+  {
+
+    
+    int sum = 0;
+    int highestNumber = -10;
+    int lowestNumber = 10;
+    
+    if(numbers == null || numbers.length <2 ){
+          return 0 ;
+      }
+    
+for(int num : numbers){
+  sum=sum + num;
+ 
+  if(num >highestNumber){
+    highestNumber = num;
+  }if(num < lowestNumber){
+    lowestNumber = num;
+  }
+  
+}      
+    sum = sum - (highestNumber + lowestNumber);
+    return sum;     
+  }
+}
